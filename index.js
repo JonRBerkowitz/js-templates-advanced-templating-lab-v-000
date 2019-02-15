@@ -1,6 +1,7 @@
 function init() {
-  let recipeFormTemplate = Handlebars.compile(document.getElementById("recipe-form-template").innerHTML);
-  document.getElementsByTagName("main")[0].innerHTML += recipeFormTemplate;
+  let formTemplate = document.getElementById("recipe-form-template").innerHTML;
+  let formTemplateFn = Handlebars.compile(formTemplate);
+  document.getElementsByTagName("main")[0].innerHTML += formTemplate;
 }
 document.addEventListener("DOMContentLoaded", function(event) {
   init()
